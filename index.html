@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Assets/img/logo.png" type="image/x-icon">
+    <title>Yummy</title>
+    <link rel="stylesheet" href="Assets/css/styles.css">
+</head>
+<body>
+    <!-- ========== Navbar Section ========== -->
+    <aside>
+        <!-- Nav-bar -->
+        <header>
+            <div class="text-black bg-white position-fixed left-0 top-0 bottom-0 d-flex flex-column justify-content-between align-items-center px-2 py-4 z-3">
+                <div><img class="logo img-fluid" role="button" src="Assets/img/logo.png" alt="logo"></div>
+                <!-- Button trigger for Offcanvas -->
+                <div id="trigger">
+                    <button id="open-nav" type="button" class="btn" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-body" aria-controls="offcanvas-body">
+                        <i class="fa fa-bars fa-2xl"></i>
+                    </button>
+                    <button type="button" class="btn d-none" data-bs-dismiss="offcanvas" data-bs-target="#offcanvas-body" aria-label="Close">
+                        <i class="fa fa-close fa-2xl"></i>
+                    </button>
+                </div>
+                <div class="d-flex flex-column">
+                    <a class="text-decoration-none text-black" href><i class="fa-solid fa-globe mb-1"></i></a>
+                    <a class="text-decoration-none text-black" href><i class="fa-solid fa-share-nodes"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Nav-body Offcanvas -->
+        <nav>
+            <div class="offcanvas offcanvas-start p-4 w-offcanvas"  data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvas-body" aria-labelledby="offcanvasBodyLabel">
+                <div class="offcanvas-body p-0">
+                    <ul class="navbar-nav flex-column align-self-start">
+                        <li class="nav-item active">
+                            <a class="nav-link" role="button" data-value="search"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvas-body" aria-controls="offcanvas-body">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" role="button" data-value="categories"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvas-body" aria-controls="offcanvas-body">Categories</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" role="button" data-value="areas"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvas-body" aria-controls="offcanvas-body">Area</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" role="button" data-value="ingredients"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvas-body" aria-controls="offcanvas-body">Ingredients</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" role="button" data-value="contact"
+                            data-bs-toggle="offcanvas" data-bs-target="#offcanvas-body" aria-controls="offcanvas-body">Contact Us</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <footer>
+                    <div>
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <p>Copyright Â© 2019 All Rights Reserved.</p>
+                </footer>
+            </div>
+        </nav>
+    </aside>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <section id="search">
+                    <div class="container w-75">
+                        <div class="row py-4 g-4">
+                            <div class="col-md-6"><input class="form-control" id="search-by-name" type="text" name="s" placeholder="Search By Name"></div>
+                            <div class="col-md-6"><input class="form-control" id="search-by-fLetter" type="text" name="f" placeholder="Search By First Letter" maxlength="1"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <div class="body-to-fill row py-5 g-4"> <!-- display all meals -->
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="categories"> <!-- display all categories -->
+            <div class="container">
+                <div class="body-to-fill row py-5 g-4">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="areas"> <!-- display all areas -->
+            <div class="container">
+                <div class="body-to-fill row py-5 g-4">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="ingredients"> <!-- display all ingredients -->
+            <div class="container">
+                <div class="body-to-fill row py-5 g-4">
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="contact"> <!-- contacts / Sing up -->
+            <div class="container w-75 text-center vh-100">
+                <div class="row py-4 g-4 h-100 align-content-center">
+                    <div class="col-md-6">
+                        <input class="form-control" id="user-name" type="text" name="name" placeholder="Enter Your Name" required>
+                        <div class="invalid-feedback alert alert-danger mt-2">Special characters and numbers not allowed</div>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" id="user-email" type="email" name="email" placeholder="Enter Your Email" required>
+                        <div class="invalid-feedback alert alert-danger mt-2">Email not valid *exemple@yyy.zzz</div>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" id="user-phone" type="text" name="phone" placeholder="Enter Your phone" required>
+                        <div class="invalid-feedback alert alert-danger mt-2">Enter valid Phone Number</div>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" id="user-age" type="number" name="age" placeholder="Enter Your Age"
+                            min="10" max="99" required>
+                            <div class="invalid-feedback alert alert-danger mt-2">Enter valid age</div>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" id="user-password" type="password" name="password" placeholder="Enter Your Password" required>
+                        <div class="invalid-feedback alert alert-danger mt-2">Enter valid password *Minimum eight characters, at least one letter and one number:*</div>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" id="user-repassword" type="password" name="repassword" placeholder="Repassword" required>
+                        <div class="invalid-feedback alert alert-danger mt-2">Enter valid repassword</div>
+                    </div>
+                    <input class="btn btn-outline-danger w-fit mx-auto" id="submit" type="submit" name="submit" role="button" value="Submit" disabled>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Details Section ========== -->
+        <section id="mealDetails">
+            <div class="container">
+                <div class="body-to-fill row">
+                    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== Loading Section ========== -->
+    <section id="loading" class="d-none">
+        <div class="d-flex justify-content-center align-items-center fs-1 bg-dark bg-opacity-50">
+            <span class="loader"><i class="fa-solid fa-spinner fa-2xl fa-spin"></i></span>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="Assets/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="Assets/js/index.js"></script>
+</body>
+</html>

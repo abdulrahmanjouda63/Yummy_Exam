@@ -1,0 +1,120 @@
+/* Font Awesome Library Icon stylesheet */
+@import url(all.min.css);
+/* Bootstrap stylesheet */
+@import url(bootstrap.min.css);
+/* Fonts */
+
+/* ========== General Styles ========== */
+:root {
+    /* Colors */
+    --white: 255, 255, 255;
+    --black: 0, 0, 0;
+
+    --sub-black: 13, 13, 13;
+    --sub-white: 249, 246, 246;
+    
+    /* Opacity */
+    --opacity: 1;
+
+    /* Colors' roles */
+    --bg-main: rgba(var(--sub-black), var(--opacity));
+    --text-main: rgba(var(--sub-white), var(--opacity));
+
+    /* Width */
+    --aside-width: 4rem;
+
+    /* Animation options */
+    --animation-duration: 0.3s ease-in-out;
+
+    /* Bootstrap (not the built-in variables) */
+    --offcanvas-width: 260px;
+}
+
+/* ========== Override Styles ========== */
+body {
+    --bs-body-bg: var(--bg-main);
+    --bs-body-color: var(--text-main);
+}
+
+
+h1, h2, h3, h4, h5, h6, p, small, a {
+    word-break: break-word;
+    text-wrap: wrap;
+}
+
+img {aspect-ratio: 1/1; object-fit: contain;}
+
+.card {border: none; transition: var(--animation-duration);}
+.card:hover {filter:grayscale(0); transform: scale(1.05);}
+.card .card-body {top:100%; transition: var(--animation-duration);}
+.card:hover .card-body{top: 0;}
+
+.form-control::placeholder {color: gray;}
+#contact .form-control {
+    --bs-body-bg: rgba(var(--white), var(--opacity));
+    --bs-body-color: rgba(var(--black), var(--opacity));
+}
+
+/* ========== Costumized Styles ========== */
+.bg-main {background-color: var(--bg-main);}
+
+.text-main {color: var(--text-main);}
+
+.w-fit {width: fit-content;}
+.w-offcanvas {--bs-offcanvas-width: var(--offcanvas-width);}
+.left-from-offcanvas {left: var(--offcanvas-width);}
+
+.pointer {cursor: pointer;}
+
+/* ========== aside Section ========== */
+header>div {
+    left: 0;
+    transition: left var(--animation-duration) ;
+}
+header .logo {max-width: 50px;}
+header .btn {--bs-body-color: rgba(var(--black), var(--opacity));}
+header .btn:active {--bs-btn-active-border-color: transparent;}
+header>div {width: var(--aside-width);}
+
+/* ========== main Section ========== */
+main {
+    width: calc(100% - var(--aside-width));
+    position: relative;
+    left: var(--aside-width);
+}
+
+/* ========== Loading Section ========== */
+#loading>div {
+    background-color: var(--body-color);
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+}
+
+
+
+/* ========== Media Query ========== */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+
+}
+
+/* Large devices (Screens, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra Large devices (Screens, 1200px and up) */
+@media (min-width: 1200px) { 
+
+}
